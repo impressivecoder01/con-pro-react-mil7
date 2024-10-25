@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import './App.css'
+import Navbar from './Components/Heading/Navbar'
 function App() {
   
 
   return (
-    <>
-      
-      <h1>Vite + React</h1>
+    <div className='max-w-6xl mx-auto'>
       
       
-    </>
+      <Navbar></Navbar>
+      
+    </div>
   )
 }
 
