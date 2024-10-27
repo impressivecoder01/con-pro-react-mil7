@@ -1,12 +1,16 @@
+import About from '../About/About';
+import Cart from '../Cart/Cart';
 import './CardContainer.css'
-const CardContainer = () => {
+const CardContainer = ({handleIsActiveState, isActive}) => {
+    console.log(isActive)
     return (
         <div>
             <h1>Card container.jsx</h1>
             <div className='toggle flex'>
-                <div className='cart-btn btn'>CART</div>
-                <div className='about btn'>About</div>
+            <button className={`${isActive.cart? 'btns active': 'btns'}`} onClick={() => handleIsActiveState("cart")} >CART</button>
+                <button className={`${isActive.cart?'btns ' : 'active btns'}`} onClick={()=> handleIsActiveState("about")} >About</button>
             </div>
+            {isActive.cart? <Cart></Cart>: <About></About>}
         </div>
     );
 };
