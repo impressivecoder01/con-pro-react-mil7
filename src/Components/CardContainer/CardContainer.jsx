@@ -2,7 +2,7 @@ import About from '../About/About';
 import Cart from '../Cart/Cart';
 import './CardContainer.css'
 const CardContainer = ({handleIsActiveState, isActive}) => {
-    console.log(isActive)
+    
     return (
         <div>
             <h1>Card container.jsx</h1>
